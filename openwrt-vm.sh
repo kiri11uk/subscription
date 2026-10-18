@@ -190,19 +190,19 @@ function prompt_router_mtu() {
 
 function default_settings() {
   VMID=$(get_valid_nextid)
-  vm_apply_machine_type "i440fx"
+  vm_apply_machine_type "q35"
   HN="openwrt"
-  CORE_COUNT="1"
-  RAM_SIZE="256"
-  CPU_TYPE=""
+  CORE_COUNT="4"
+  RAM_SIZE="2048"
+  CPU_TYPE="host"
   DISK_CACHE=""
   BRG="vmbr0"
-  LAN_BRG="vmbr0"
+  LAN_BRG="vmbr1"
   MAC=$GEN_MAC
   LAN_MAC=$GEN_MAC_LAN
   VLAN=""
   LAN_VLAN=""
-  LAN_IP_ADDR="192.168.1.1"
+  LAN_IP_ADDR="192.168.88.1"
   LAN_NETMASK="255.255.255.0"
   MTU=""
   START_VM="yes"
@@ -221,7 +221,7 @@ function default_settings() {
 
 function advanced_settings() {
   METHOD="advanced"
-  CPU_TYPE=""
+  CPU_TYPE="host"
   DISK_CACHE=""
   vm_apply_machine_type "q35"
   vm_prompt_vmid "${VMID:-$(get_valid_nextid)}"
@@ -240,7 +240,7 @@ function advanced_settings() {
   prompt_router_mac "MAC" "WAN MAC ADDRESS" "Set a WAN MAC Address" "$GEN_MAC" "WAN MAC address"
   prompt_router_mac "LAN_MAC" "LAN MAC ADDRESS" "Set a LAN MAC Address" "$GEN_MAC_LAN" "LAN MAC address"
   prompt_router_vlan "VLAN" "VLAN1" "WAN VLAN" "Set a WAN Vlan (leave blank for default)" ""
-  prompt_router_vlan "LAN_VLAN" "VLAN2" "LAN VLAN" "Set a LAN Vlan" "999"
+  prompt_router_vlan "LAN_VLAN" "VLAN2" "LAN VLAN" "Set a LAN Vlan (leave blank for default)" ""
   prompt_router_mtu
   vm_prompt_start_vm "yes"
 
