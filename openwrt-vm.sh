@@ -253,7 +253,7 @@ function advanced_settings() {
   fi
 }
 
-vm_start_script "Use Default Settings?\n\nDefaults:\n• 1 CPU Core\n• 256 MB RAM\n• 1 GB Disk" 13 58
+vm_start_script "Use Default Settings?\n\nDefaults:\n• 1 CPU Core\n• 2048 MB RAM\n• 1 GB Disk" 13 58
 post_to_api_vm
 
 vm_select_storage "$HN"
