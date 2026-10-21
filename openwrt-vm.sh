@@ -205,7 +205,7 @@ function default_settings() {
   LAN_IP_ADDR="192.168.88.1"
   LAN_NETMASK="255.255.255.0"
   MTU=""
-  START_VM="yes"
+  START_VM="no"
   METHOD="default"
   DISK_SIZE="1G"
   echo -e "${CONTAINERID}${BOLD}${DGN}VMID: ${BGN}${VMID}${CL}"
@@ -242,7 +242,7 @@ function advanced_settings() {
   prompt_router_vlan "VLAN" "VLAN1" "WAN VLAN" "Set a WAN Vlan (leave blank for default)" ""
   prompt_router_vlan "LAN_VLAN" "VLAN2" "LAN VLAN" "Set a LAN Vlan (leave blank for default)" ""
   prompt_router_mtu
-  vm_prompt_start_vm "yes"
+  vm_prompt_start_vm "no"
 
   if vm_confirm_advanced_settings "Ready to create OpenWrt VM?"; then
     echo -e "${RD}Creating a OpenWrt VM using the above advanced settings${CL}"
