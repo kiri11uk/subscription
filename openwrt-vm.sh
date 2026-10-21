@@ -191,7 +191,7 @@ function prompt_router_mtu() {
 function default_settings() {
   VMID=$(get_valid_nextid)
   vm_apply_machine_type "q35"
-  HN="openwrt"
+  HN="OpenWRT"
   CORE_COUNT="4"
   RAM_SIZE="2048"
   CPU_TYPE="host"
@@ -225,7 +225,7 @@ function advanced_settings() {
   DISK_CACHE=""
   vm_apply_machine_type "q35"
   vm_prompt_vmid "${VMID:-$(get_valid_nextid)}"
-  vm_prompt_hostname "openwrt"
+  vm_prompt_hostname "OpenWRT"
   vm_prompt_cpu_cores "4"
   vm_prompt_ram "2048"
   vm_prompt_disk_size "1G"
