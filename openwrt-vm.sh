@@ -228,7 +228,7 @@ function advanced_settings() {
   vm_prompt_hostname "OpenWRT"
   vm_prompt_cpu_cores "4"
   vm_prompt_ram "2048"
-  vm_prompt_disk_size "0.5G"
+  vm_prompt_disk_size "1G"
   vm_prompt_keyboard
   vm_prompt_verbose "no"
   prompt_router_input "BRG" "WAN BRIDGE" "Set a WAN Bridge" "vmbr0"
