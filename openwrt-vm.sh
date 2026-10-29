@@ -261,7 +261,7 @@ msg_info "Getting URL for OpenWrt Disk Image"
 
 vm_latest_from_index "https://openwrt.org" 'Current stable release - OpenWrt \K[0-9]+\.[0-9]+\.[0-9]+' || exit 115
 var_version="$VM_INDEX_LATEST"
-URL="https://raw.githubusercontent.com/kiri11uk/subscription/refs/heads/main/openwrt-25.12.6-3761626b9b20-x86-64-generic-ext4-combined.img.gz"
+URL="https://raw.githubusercontent.com/kiri11uk/subscription/refs/heads/main/openwrt-25.12.6-8bf8b4d07cc0-x86-64-generic-ext4-combined.img.gz"
 
 msg_ok "${CL}${BL}${URL}${CL}"
 # A mirror serving an error page returns 200, so size decides whether this
