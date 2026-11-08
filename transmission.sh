@@ -24,7 +24,7 @@ if [[ "${var_os:-}" == "alpine" ]]; then
 else
   var_cpu="${var_cpu:-1}"
   var_ram="${var_ram:-1024}"
-  var_disk="${var_disk:-1}"
+  var_disk="${var_disk:-1.5}"
   var_version="${var_version:-13}"
 fi
 
