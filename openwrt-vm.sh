@@ -226,7 +226,7 @@ function advanced_settings() {
   vm_apply_machine_type "q35"
   vm_prompt_vmid "${VMID:-$(get_valid_nextid)}"
   vm_prompt_hostname "OpenWRT"
-  vm_prompt_cpu_cores "4"
+  vm_prompt_cpu_cores "2"
   vm_prompt_ram "2048"
   vm_prompt_disk_size "1G"
   vm_prompt_keyboard
